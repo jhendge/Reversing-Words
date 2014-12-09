@@ -18,3 +18,13 @@ def reverse_words(string)
 end
 
 # p reverse_words("Old News")
+
+def assert
+  raise "Assertion failed!" unless yield
+end
+
+assert {reverse_words("Joseph") == "hpesoJ"}
+assert {reverse_words("Old News") == "dlO sweN"}
+assert {reverse_words("") == ""}
+assert {reverse_words("Ich bin ein Berliner") == "hcI nib nie renilreB"}
+assert {reverse_words("sihT ecnetnes si !sdrawkcab") == "This sentence is backwards!"}
